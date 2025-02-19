@@ -9,6 +9,11 @@ theme = ["hugo-video"]
 path = "github.com/panr/hugo-theme-terminal/v4"
 
 
+[markup]
+[markup.tableOfContents]
+startLevel = 1
+
+
 [params.logo]
 logoText = "theRookieCoder"
 logoHomeLink = "/"
