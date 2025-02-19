@@ -42,16 +42,16 @@ The execution loop of the CHIP-8 is quite simple:
 
 3. 'Decode' the instruction. CHIP-8 instructions pack the opcode and operands into a single 16-bit number. So, we need to mask out parts of it to determine the operands.
 
-| Mask   | Description               | Used                                         |
-| ------ | ------------------------- | -------------------------------------------- |
-| `_x__` | 2nd nibble                | For `x`th variable register, written as `Vx` |
-| `__y_` | 3rd nibble                | For `y`th variable register, written as `Vy` |
-| `___n` | 4th nibble                | As a 4-bit number (nibble)                   |
-| `__nn` | 3rd & 4th nibbles         | As an 8-bit number (byte)                    |
-| `_nnn` | 2nd, 3rd, and 4th nibbles | As a 12-bit number                           |
+    | Mask   | Description               | Used                                         |
+    | ------ | ------------------------- | -------------------------------------------- |
+    | `_x__` | 2nd nibble                | For `x`th variable register, written as `Vx` |
+    | `__y_` | 3rd nibble                | For `y`th variable register, written as `Vy` |
+    | `___n` | 4th nibble                | As a 4-bit number (nibble)                   |
+    | `__nn` | 3rd & 4th nibbles         | As an 8-bit number (byte)                    |
+    | `_nnn` | 2nd, 3rd, and 4th nibbles | As a 12-bit number                           |
 
-	The purpose of the last 3 operands depends on the opcode.  
-	I extracted these operands by masking out the required nibble(s) using `AND`, and bit-shifting them to the unit's place. I used `#define` for these instead of dedicated variables. Remember to add an extra pair of parentheses around the entire expression when using `#define`!
+    The purpose of the last 3 operands depends on the opcode.  
+    I extracted these operands by masking out the required nibble(s) using `AND`, and bit-shifting them to the unit's place. I used `#define` for these instead of dedicated variables. Remember to add an extra pair of parentheses around the entire expression when using `#define`!
 
 1. Determine the opcode to execute. The first bit, and sometimes `n` or `nn`, is used to specify the opcode. I used nested switch statements for this, which in hindsight is a terrible idea. I kept forgetting to add `break`, and I initially used multiple `default` blocks to catch illegal instructions. A language with more powerful pattern matching would fare better here.
 
@@ -78,13 +78,13 @@ After that, I began implementing more instructions, going in the order that Tobi
 I also had tons of bugs with flag calculations. [Timendus' flags test](https://github.com/Timendus/chip8-test-suite#flags-test) was really helpful for checking this.
 
 4. You should locally buffer either `Vx` and `Vy`, or the carry/overflow flag. You don't want the assigned value to affect the flag calculation, or vice versa.  
-	For example, consider the instruction `8xy4` (add with carry). If either `x` or `y` are `F`, such as with `8AF4`, it becomes tricky because the flag variable itself is being used as an operand.  
-	If you don't buffer the variable, you're going to  
-	- use the result of the flag calculation (`0` or `1`) when doing the addition, instead of using the value that was originally in `VF`. Or,
-	- miscalculate the flag since you already overrode `Vx` with the result.
+    For example, consider the instruction `8xy4` (add with carry). If either `x` or `y` are `F`, such as with `8AF4`, it becomes tricky because the flag variable itself is being used as an operand.  
+    If you don't buffer the variable, you're going to  
+    - use the result of the flag calculation (`0` or `1`) when doing the addition, instead of using the value that was originally in `VF`. Or,
+    - miscalculate the flag since you already overrode `Vx` with the result.
 5. I didn't realise that `VF` should *always* be overridden, even if it is used as an operand in the instruction.  
-	Again with `8FA4`, you should first fetch the values of `VF` and `VA`, add and assign them to `VF`, then override `VF` with `0` or `1` depending on whether the addition overflowed. This means that the value of the addition isn't actually used when `x` is `F`.  
-	I think this behaviour is a side effect of the CHIP-8's lack of a dedicated accumulator register or carry flag.
+    Again with `8FA4`, you should first fetch the values of `VF` and `VA`, add and assign them to `VF`, then override `VF` with `0` or `1` depending on whether the addition overflowed. This means that the value of the addition isn't actually used when `x` is `F`.  
+    I think this behaviour is a side effect of the CHIP-8's lack of a dedicated accumulator register or carry flag.
 6. The overflow flag for subtraction should be set even if the result is `0`, i.e. `Vx` and `Vy` are equal. In other words, the check for the overflow flag should be a slack inequality. This was not documented in Tobias' guide, and a website I was referring to actually specified strict inequality. I have read online that this behaviour from the original COSMAC VIP is often overlooked due to its insignificance.
 
 ## Integrating a Windowed Front End
