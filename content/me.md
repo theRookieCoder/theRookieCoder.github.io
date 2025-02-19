@@ -1,5 +1,5 @@
 +++
-title = "Me"
+title = "Hi there!"
 date = "2025-02-19"
 author = "theRookieCoder"
 cover = ""
@@ -12,11 +12,11 @@ Toc = false
 Hello, and welcome to my website! I suppose you want to learn more about me... interesting choice.
 
 I like to read story books, my preferred genres are science fiction (surprise surprise) and fantasy. Some of my favourite books are
-- [The Witcher](https://www.goodreads.com/series/40911-the-witcher) by Andrzej Sapkowski
-- [Harry Potter](https://www.goodreads.com/series/45175-harry-potter) by J.K. Rowling
-- [River of Ink](https://www.goodreads.com/series/201124-river-of-ink) by Helen Dennis
-- [Chronicle of the Dark Star](https://www.goodreads.com/series/179730-chronicle-of-the-dark-star) by Kevin Emerson
-- [Maze Runner](https://www.goodreads.com/series/110451-the-maze-runner) by James Dashner
+- [The Witcher](https://www.goodreads.com/series/40911-the-witcher)
+- [Harry Potter](https://www.goodreads.com/series/45175-harry-potter)
+- [River of Ink](https://www.goodreads.com/series/201124-river-of-ink)
+- [Chronicle of the Dark Star](https://www.goodreads.com/series/179730-chronicle-of-the-dark-star)
+- [Maze Runner](https://www.goodreads.com/series/110451-the-maze-runner)
 - [39 Clues](https://www.goodreads.com/series/45556-the-39-clues) and its spinoff series
 
 Twisty puzzles are awesome, particularly when it involves a lot of thinking. I can solve the 2x2, 3x3, 4x4, 5x5, 7x7 (mostly), Square-1, and Mirror Cube. At one point, I was averaging around 30 seconds to solve a 3x3.
@@ -35,7 +35,7 @@ But beyond all of that, my **passion** is computers. To say that I *love* comput
 
 My dad likes to code at home as a hobby. A few years ago, he was learning Swift to create apps, and I approached him to learn about what he was doing. He opened a REPL and showed me how you could assign numbers to letters (variables) and compute the result of operations on them. I was amazed, and the part of this that attracted me the most was that the computer didn't care what values were in the variables, it computed the result regardless. While I had used computer before, this experience made me understand their significance, and I was excited to take advantage of this.
 
-The first language I learned was Python. At the time, I was learning a solution to a type of word problem that used the guess and check method (this was before we learned algebra). So, the first program I made solved this type of word problem by getting values from the user, and trying a few estimates to see if the answer is right. After this, I created a few more progams with Python, for example one program randomly generates test questions for me to practise using a soroban.
+The first language I learned was Python. At the time, I was learning a solution to a type of word problem that used the guess and check method (this was before we learned algebra). So, the first program I made solved this type of word problem by getting values from the user, and trying a few estimates to see if the answer is right. After this, I created a few more programs with Python, for example one program randomly generates test questions for me to practise using a soroban.
 
 I got an Arduino and Raspberry Pi the next year, and I really liked that I could control electronic devices in the real world using my code. But the programming really ramped up when I was 13. My dad had bought a course online for Flutter, and he wanted me to try and learn creating apps as well. After completing Secondary 1, I had a gap as I moved countries, and I thoroughly utilised this time to learn Flutter.
 
