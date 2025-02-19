@@ -9,7 +9,7 @@ keywords = []
 description = ""
 +++
 
-{{< image src="/images/chip8-meme.jpg" alt="CHIP-8 Meme" >}}
+{{< image src="/images/chip8-meme.avif" alt="CHIP-8 Meme" >}}
 
 I first heard of CHIP-8 when I was beginning to learn Rust. A Redditor suggested it as a reasonably-sized but simple project to get started with a new language. I tried it out, but was unable to even get the obligatory *IBM logo* program to run; likely due to a lack of Rust knowledge, inexperience with programming, or both. Anyways, I bookmarked the tutorial with the intent of trying it out some other day, and moved on to other projects.
 
