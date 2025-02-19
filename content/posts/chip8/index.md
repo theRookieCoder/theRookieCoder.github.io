@@ -41,18 +41,19 @@ The execution loop of the CHIP-8 is quite simple:
 2. Increment the program counter by 2, since we just loaded 2 bytes.
 
 3. 'Decode' the instruction. CHIP-8 instructions pack the opcode and operands into a single 16-bit number. So, we need to mask out parts of it to determine the operands.
-    | Mask   | Description               | Used                                         |
-    | ------ | ------------------------- | -------------------------------------------- |
-    | `_x__` | 2nd nibble                | For `x`th variable register, written as `Vx` |
-    | `__y_` | 3rd nibble                | For `y`th variable register, written as `Vy` |
-    | `___n` | 4th nibble                | As a 4-bit number (nibble)                   |
-    | `__nn` | 3rd & 4th nibbles         | As an 8-bit number (byte)                    |
-    | `_nnn` | 2nd, 3rd, and 4th nibbles | As a 12-bit number                           |
-	
+
+| Mask   | Description               | Used                                         |
+| ------ | ------------------------- | -------------------------------------------- |
+| `_x__` | 2nd nibble                | For `x`th variable register, written as `Vx` |
+| `__y_` | 3rd nibble                | For `y`th variable register, written as `Vy` |
+| `___n` | 4th nibble                | As a 4-bit number (nibble)                   |
+| `__nn` | 3rd & 4th nibbles         | As an 8-bit number (byte)                    |
+| `_nnn` | 2nd, 3rd, and 4th nibbles | As a 12-bit number                           |
+
 	The purpose of the last 3 operands depends on the opcode.  
 	I extracted these operands by masking out the required nibble(s) using `AND`, and bit-shifting them to the unit's place. I used `#define` for these instead of dedicated variables. Remember to add an extra pair of parentheses around the entire expression when using `#define`!
 
-4. Determine the opcode to execute. The first bit, and sometimes `n` or `nn`, is used to specify the opcode. I used nested switch statements for this, which in hindsight is a terrible idea. I kept forgetting to add `break`, and I initially used multiple `default` blocks to catch illegal instructions. A language with more powerful pattern matching would fare better here.
+1. Determine the opcode to execute. The first bit, and sometimes `n` or `nn`, is used to specify the opcode. I used nested switch statements for this, which in hindsight is a terrible idea. I kept forgetting to add `break`, and I initially used multiple `default` blocks to catch illegal instructions. A language with more powerful pattern matching would fare better here.
 
 The instructions you should start off with are
 - `00E0`: Clear the display (has no operands)
