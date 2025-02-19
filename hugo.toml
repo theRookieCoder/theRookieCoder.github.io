@@ -1,11 +1,17 @@
 baseURL = "https://theRookieCoder.github.io/"
 languageCode = "en-us"
-title = ": : RC"
+title = "theRookieCoder"
+theme = ["hugo-video"]
 
 
 [module]
 [[module.imports]]
 path = "github.com/panr/hugo-theme-terminal/v4"
+
+
+[params.logo]
+logoText = "theRookieCoder"
+logoHomeLink = "/"
 
 
 [params]
@@ -69,10 +75,6 @@ Toc = true
 # index.html, the posts list page, and on posts themselves
 # Default value: (ISO 8601)
 # dateFormat = "2006-01-02"
-
-[params.logo]
-logoText = "theRookieCoder"
-logoHomeLink = "/"
 
 
 [menu]

@@ -1,6 +1,7 @@
 +++
 title = "Devlog: Writing a CHIP-8 emulator"
 date = "2025-01-18"
+lastmod = "2025-02-13"
 author = "theRookieCoder"
 cover = ""
 tags = []
@@ -8,7 +9,7 @@ keywords = []
 description = ""
 +++
 
-![CHIP-8 Meme](https://gist.github.com/user-attachments/assets/e6f487ce-497d-4d4d-ad27-949cd39c3f58)
+{{< image src="/images/chip8-meme.jpg" alt="CHIP-8 Meme" >}}
 
 I first heard of CHIP-8 when I was beginning to learn Rust. A Redditor suggested it as a reasonably-sized but simple project to get started with a new language. I tried it out, but was unable to even get the obligatory *IBM logo* program to run; likely due to a lack of Rust knowledge, inexperience with programming, or both. Anyways, I bookmarked the tutorial with the intent of trying it out some other day, and moved on to other projects.
 
@@ -146,7 +147,8 @@ In the CHIP-8's memory map, addresses `0x000`-`0x200` are unused (apart from the
 
 The font can be placed anywhere in RAM, so I placed it just before where the program starts. Since the program starts at `0x200` and the font takes up `0x50` bytes, I placed it at `0x1B0`. Now, whenever the program uses addresses past the configured `CORE_RAM_SIZE`, we can make it wrap around to the beginning of the emulated RAM like a ring buffer. This effectively increases our usable program memory from `CORE_RAM_SIZE - 0x200` to `CORE_RAM_SIZE - 0x50`, that's 432 more bytes of usable program memory!
 
-![ChipBoy8 Optimised Memory Layout](https://gist.github.com/user-attachments/assets/532b8ef3-c797-410c-9c0b-c6244c22da78)
+{{< figure src="/images/chip8-memory-layout.svg" alt="ChipBoy8 Optimised Memory Layout" >}}
+
 This required some modification of the code. The core itself was easy to modify, but for program loading I had to replace `Serial.readBytesUntil` with a custom for loop, and I had to split the `memcpy_P` into 2 parts if the program wraps around RAM buffer.
 
 With this, the emulator is pretty much complete! It passes all the tests as expected, and plays games quite well.
@@ -162,7 +164,7 @@ I started off by writing the core of the emulator based on the C implementation.
 
 This was when I discovered a bug with my timing. I was playing Tetris, and I noticed the pieces would glitch out when I rotated them.
 
-https://gist.github.com/user-attachments/assets/2e24be48-889e-4b62-a4b6-cc28227d334c
+{{< video src="glitched-tetris-pieces" >}}
 
 ## Timing Bug
 
