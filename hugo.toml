@@ -37,7 +37,7 @@ words = "words"
 # contents directory
 contentTypeName = "posts"
 
-showMenuItems = 5
+showMenuItems = 6
 
 # don't allow switching languages
 showLanguageSelector = false
@@ -79,9 +79,15 @@ Toc = true
 
 [menu]
 [[menu.main]]
-identifier = "about"
-name = "About"
-url = "/about"
+identifier = "me"
+name = "Me"
+url = "/me"
+weight = -3
+
+[[menu.main]]
+identifier = "setup"
+name = "Setup"
+url = "/setup"
 weight = -2
 
 [[menu.main]]
