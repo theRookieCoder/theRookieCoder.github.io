@@ -357,7 +357,8 @@ blockquote p:last-child {
 }
 
 table {
-  table-layout: auto;
+  width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
 }
 
@@ -373,6 +374,8 @@ th {
   color: var(--foreground);
   text-align: left;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden;
   letter-spacing: 0.04em;
 }
 
