@@ -42,7 +42,7 @@ The execution loop of the CHIP-8 is quite simple:
 
 3. 'Decode' the instruction. CHIP-8 instructions pack the opcode and operands into a single 16-bit number. So, we need to mask out parts of it to determine the operands.
 
-    | Mask   | Description               | Used                                         |
+    | Mask   | Desc&shy;ription          | Used                                         |
     | ------ | ------------------------- | -------------------------------------------- |
     | `_x__` | 2nd nibble                | For `x`th variable register, written as `Vx` |
     | `__y_` | 3rd nibble                | For `y`th variable register, written as `Vy` |

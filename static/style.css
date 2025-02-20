@@ -375,6 +375,7 @@ th {
   text-align: left;
   text-transform: uppercase;
   text-overflow: ellipsis;
+  hyphens: auto;
   overflow: hidden;
   letter-spacing: 0.04em;
 }
