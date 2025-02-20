@@ -27,7 +27,7 @@ subtitle = "theRookieCoder's website and blog"
 owner = "Ilesh Thiada (theRookieCoder)"
 keywords = ""
 copyright = ""
-menuMore = "Show more"
+menuMore = "Socials"
 readMore = "Read more"
 readOtherPosts = "Read other posts"
 newerPosts = "Newer posts"
@@ -42,7 +42,7 @@ words = "words"
 # contents directory
 contentTypeName = "posts"
 
-showMenuItems = 6
+showMenuItems = 4
 
 # don't allow switching languages
 showLanguageSelector = false
@@ -83,15 +83,22 @@ Toc = true
 
 
 [menu]
+
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = -4
+
 [[menu.main]]
 identifier = "me"
-name = "Me"
+name = "About Me"
 url = "/me"
 weight = -3
 
 [[menu.main]]
 identifier = "setup"
-name = "Setup"
+name = "My Setup"
 url = "/setup"
 weight = -2
 
