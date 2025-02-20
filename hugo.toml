@@ -1,4 +1,4 @@
-baseURL = "https://theRookieCoder.github.io/"
+baseURL = "https://therookiecoder.is-a.dev/"
 languageCode = "en-us"
 title = "theRookieCoder"
 theme = ["hugo-video"]
