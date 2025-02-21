@@ -39,7 +39,6 @@ body {
     sans-serif;
   font-feature-settings: "frac";
   font-size: var(--font-size);
-  font-weight: 400;
   line-height: var(--line-height);
   letter-spacing: 0em;
   background-color: var(--background);

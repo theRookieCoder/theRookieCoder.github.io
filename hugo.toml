@@ -12,6 +12,8 @@ path = "github.com/panr/hugo-theme-terminal/v4"
 [markup]
 [markup.tableOfContents]
 startLevel = 1
+[markup.goldmark.renderer]
+unsafe = true
 
 
 [params.logo]
