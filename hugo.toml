@@ -87,25 +87,25 @@ Toc = true
 [[menu.main]]
 identifier = "home"
 name = "Home"
-url = "/"
+pageref = "/"
 weight = -4
 
 [[menu.main]]
 identifier = "me"
 name = "About Me"
-url = "/me"
+pageref = "/me/"
 weight = -3
 
 [[menu.main]]
 identifier = "setup"
 name = "My Setup"
-url = "/setup"
+pageref = "/setup/"
 weight = -2
 
 [[menu.main]]
 identifier = "showcase"
 name = "Showcase"
-url = "/showcase"
+pageref = "/showcase/"
 weight = -1
 
 [[menu.main]]

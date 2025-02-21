@@ -9,7 +9,7 @@ keywords = []
 description = ""
 +++
 
-{{< image src="/images/chip8-meme.avif" alt="CHIP-8 Meme" >}}
+{{< image src="meme.avif" alt="CHIP-8 Meme" >}}
 
 I first heard of CHIP-8 when I was beginning to learn Rust. A Redditor suggested it as a reasonably-sized but simple project to get started with a new language. I tried it out, but was unable to even get the obligatory *IBM logo* program to run; likely due to a lack of Rust knowledge, inexperience with programming, or both. Anyways, I bookmarked the tutorial with the intent of trying it out some other day, and moved on to other projects.
 
@@ -148,7 +148,7 @@ In the CHIP-8's memory map, addresses `0x000`-`0x200` are unused (apart from the
 
 The font can be placed anywhere in RAM, so I placed it just before where the program starts. Since the program starts at `0x200` and the font takes up `0x50` bytes, I placed it at `0x1B0`. Now, whenever the program uses addresses past the configured `CORE_RAM_SIZE`, we can make it wrap around to the beginning of the emulated RAM like a ring buffer. This effectively increases our usable program memory from `CORE_RAM_SIZE - 0x200` to `CORE_RAM_SIZE - 0x50`, that's 432 more bytes of usable program memory!
 
-{{< figure src="/images/chip8-memory-layout.svg" alt="ChipBoy8 Optimised Memory Layout" >}}
+{{< figure src="memory-layout.svg" alt="ChipBoy8 Optimised Memory Layout" >}}
 
 This required some modification of the code. The core itself was easy to modify, but for program loading I had to replace `Serial.readBytesUntil` with a custom for loop, and I had to split the `memcpy_P` into 2 parts if the program wraps around RAM buffer.
 
