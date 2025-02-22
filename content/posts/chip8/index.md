@@ -138,7 +138,7 @@ Anyways, back to the emulator. Key input handling, pixel querying and toggling, 
 
 ## Implementing the Arduboy Front End
 
-After a few days of frustrating debugging, I eventually got an initial working implementation. Key input was implemented using a per-program configurable keymap, which maps to the Arduboy's 4-button D-pad and A & B buttons. Support for sound was next, which is a simple 440 Hz square wave tone.
+After a few days of frustrating debugging, I eventually got an initial working implementation. Key input was implemented using a per-program configurable keymap, which maps to the Arduboy's 4-button D-pad and <kbd>A</kbd> & <kbd>B</kbd> buttons. Support for sound was next, which is a simple 440 Hz square wave tone.
 
 I added a program selection menu at startup, and included 4 programs with the emulator. I also added an option to upload a program to RAM from a computer over serial. You need to select "Load from Computer" in the Arduboy's startup menu, run [the Python script](https://github.com/theRookieCoder/ChipBoy8/blob/main/chipboy8.py) with the path to the ROM file, type in the keys to map the Arduboy's buttons to, and wait for the program to transfer. This feature was particularly frustrating to implement because it is hard to keep two computers in-sync and waiting for each other. This was exacerbated by the design of the Arduino [`Serial`](https://docs.arduino.cc/language-reference/en/functions/communication/serial) class, which does not have a blocking method for reading.
 
