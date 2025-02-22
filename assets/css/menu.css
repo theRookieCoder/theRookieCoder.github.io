@@ -83,7 +83,9 @@
 .menu--mobile .menu__trigger {
   color: var(--accent);
   border: 2px solid;
-  margin-left: 10px;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  margin-left: 8px;
   height: 100%;
   padding: 3px 8px;
   margin-bottom: 0 !important;

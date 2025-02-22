@@ -36,6 +36,8 @@
   background: var(--accent);
   color: var(--background);
   padding: 5px 10px;
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
 }
 
 @media print {

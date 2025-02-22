@@ -2,7 +2,7 @@
   font-family: "Atkinson Hyperlegible Next";
   src: url("/fonts/atkinson-hyperlegible-next-variable.woff2");
   font-display: swap;
-  font-synthesis: none;
+  font-synthesis: none !important;
 }
 
 @font-face {
