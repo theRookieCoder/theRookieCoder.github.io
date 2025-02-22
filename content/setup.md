@@ -10,18 +10,18 @@ tags = []
 
 ## Computer (Laptop)
 
-I use the [Framework](https://frame.work) [Laptop 13](https://frame.work/laptop13), I pre-ordered the Ryzen 7040 series DIY edition near the end of 2023.
+I use the [Framework](https://frame.work) [Laptop 13](https://frame.work/laptop13), specifically the Ryzen 7040 series from 2023.
 
-| Component | Spec              |
-| --------- | ----------------- |
-| CPU       | [AMD Ryzen 7840u] |
-| RAM       | DDR5 5600 MHz     |
-| Memory    | 2x16 GB           |
-| SSD       | WD_BLACK SN850X   |
-| Storage   | 1 TB              |
-| Keyboard  | US English        |
+| Com&shy;ponent | Spec              |
+| -------------- | ----------------- |
+| CPU            | [AMD Ryzen 7840U] |
+| RAM            | DDR5 5600 MHz     |
+| Memory         | 2x16 GB           |
+| SSD            | WD_BLACK SN850X   |
+| Storage        | 1 TB              |
+| Keyboard       | US English        |
 
-[AMD Ryzen 7840u]: https://www.amd.com/en/products/processors/laptop/ryzen/7000-series/amd-ryzen-7-7840u.html
+[AMD Ryzen 7840U]: https://www.amd.com/en/products/processors/laptop/ryzen/7000-series/amd-ryzen-7-7840u.html
 
 The only part of this laptop that I've changed is the WiFi card, I replaced the stock MediaTek card with an Intel AX210 as I had connectivity issues.
 
@@ -41,7 +41,7 @@ For colours, I like the [Catppuccin](https://catppuccin.com) theme, specifically
 
 ## Operating System
 
-I daily-drive the latest version of [Fedora Linux](https://fedoraproject.org), and I have Windows 11 on the other partition of my dual-boot setup. On Fedora, I use KDE as my desktop environment; the only theming I have done is using [Catppuccin](https://github.com/catppuccin/kde) colour theme.
+I daily-drive the latest version of [Fedora Linux](https://fedoraproject.org), and I have Windows 11 on the other partition of my dual-boot setup. On Fedora, I use KDE as my desktop environment; the only theming I have done is using the [Catppuccin](https://github.com/catppuccin/kde) colour theme.
 
 ## Browser (Firefox)
 

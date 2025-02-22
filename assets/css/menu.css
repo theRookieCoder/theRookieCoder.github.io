@@ -53,6 +53,7 @@
   box-shadow: 0 10px var(--background), -10px 10px var(--background), 10px 10px var(--background);
   color: var(--accent);
   border: 2px solid var(--accent);
+  border-radius: var(--radius);
   margin: 0;
   padding: 10px;
   top: 10px;
