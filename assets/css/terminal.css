@@ -8,8 +8,8 @@
   /* Text */
   --foreground: #cad3f5;
 
-  /* Subtext 0 */
-  --subtext: #a5adcb;
+  /* Overlay 2 */
+  --subtext: #939ab7;
 
   /* Mauve */
   --accent: #c6a0f6;
@@ -362,7 +362,7 @@ blockquote p:last-child {
 }
 
 table {
-  width: 100%;
+  max-width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
 }
