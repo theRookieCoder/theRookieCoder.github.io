@@ -8,14 +8,15 @@ pre {
   border: 1px solid color-mix(in srgb, var(--accent) 10%, transparent);
 }
 
-.code-toolbar + .code-toolbar,
-.code-toolbar + .highlight,
-.code-toolbar + .highlight .code-toolbar {
+.code-toolbar+.code-toolbar,
+.code-toolbar+.highlight,
+.code-toolbar+.highlight .code-toolbar {
   border-top: 0;
   margin-top: -20px;
 }
 
-.code-toolbar pre, .code-toolbar code {
+.code-toolbar pre,
+.code-toolbar code {
   border: none;
 }
 
@@ -24,10 +25,10 @@ pre {
   color: color-mix(in srgb, var(--accent) 50%, var(--foreground));
 }
 
-.code-toolbar > .toolbar button {
+.code-toolbar>.toolbar button {
   font-size: 0.8em !important;
   font-weight: bold !important;
-  background:  var(--accent) !important;
+  background: var(--accent) !important;
   color: var(--background) !important;
   border-radius: var(--radius) !important;
   box-shadow: none !important;
@@ -48,21 +49,21 @@ pre {
   visibility: hidden;
 }
 
-.collapsable-code input[type=checkbox]:checked ~ pre,
-.collapsable-code input[type=checkbox]:checked ~ .code-toolbar pre {
+.collapsable-code input[type=checkbox]:checked~pre,
+.collapsable-code input[type=checkbox]:checked~.code-toolbar pre {
   display: none;
 }
 
-.collapsable-code input[type=checkbox]:checked ~ .code-toolbar {
+.collapsable-code input[type=checkbox]:checked~.code-toolbar {
   padding: 0;
   border-top: none;
 }
 
-.collapsable-code input[type=checkbox]:checked ~ .code-toolbar .toolbar {
+.collapsable-code input[type=checkbox]:checked~.code-toolbar .toolbar {
   display: none;
 }
 
-.collapsable-code input[type=checkbox]:checked ~ label .collapsable-code__toggle::after {
+.collapsable-code input[type=checkbox]:checked~label .collapsable-code__toggle::after {
   content: attr(data-label-expand);
 }
 

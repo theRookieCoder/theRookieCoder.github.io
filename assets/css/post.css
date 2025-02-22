@@ -35,7 +35,7 @@
   color: color-mix(in srgb, var(--foreground) 50%, transparent);
 }
 
-.post-meta > *:not(:first-child)::before {
+.post-meta>*:not(:first-child)::before {
   content: "::";
   display: inline-block;
   margin: 0 8px;
@@ -103,7 +103,7 @@
   margin-bottom: 10px;
 }
 
-.post--regulation h2 + h2 {
+.post--regulation h2+h2 {
   margin-top: -10px;
   margin-bottom: 20px;
 }

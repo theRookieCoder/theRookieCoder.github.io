@@ -1,19 +1,11 @@
 @font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("/fonts/atkinson-hyperlegible-next-variable.woff2");
   font-display: swap;
-  font-family: "Fira Code";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/FiraCode-Regular.woff") format("woff");
-  font-feature-settings: "liga", "tnum", "ss01", "locl";
-  font-variant-ligatures: contextual;
 }
 
 @font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono-medium.woff2");
   font-display: swap;
-  font-family: "Fira Code";
-  font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/FiraCode-Bold.woff") format("woff");
-  font-feature-settings: "liga", "tnum", "ss01", "locl";
-  font-variant-ligatures: contextual;
 }

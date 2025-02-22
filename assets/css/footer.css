@@ -31,7 +31,7 @@
   text-align: center;
 }
 
-.footer .copyright > *:first-child:not(:only-child) {
+.footer .copyright>*:first-child:not(:only-child) {
   margin-right: 10px;
 }
 

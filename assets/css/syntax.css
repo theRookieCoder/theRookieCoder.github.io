@@ -42,7 +42,7 @@ code.language-scss,
 .token.deleted,
 code.language-javascript,
 code.language-html,
-.command-line-prompt > span::before {
+.command-line-prompt>span::before {
   color: var(--accent) !important;
 }
 
