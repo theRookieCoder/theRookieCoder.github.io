@@ -32,7 +32,7 @@
 .post-meta {
   font-size: 1rem;
   margin-bottom: 10px;
-  color: color-mix(in srgb, var(--foreground) 50%, transparent);
+  color: var(--subtext);
 }
 
 .post-meta>*:not(:first-child)::before {
@@ -126,7 +126,7 @@ h6:hover .hanchor {
 }
 
 .footnotes {
-  color: color-mix(in srgb, var(--foreground) 50%, transparent);
+  color: var(--subtext);
 }
 
 .footnotes hr {

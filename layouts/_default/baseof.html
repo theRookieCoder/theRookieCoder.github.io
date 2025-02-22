@@ -3,7 +3,13 @@
 
 <head>
   {{ block "title" . }}
-  <title>{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ end }}</title>
+    <title>
+      {{ if .IsHome }}
+        {{ $.Site.Title }}
+      {{ else }}
+        {{ .Title }} :: {{ $.Site.Title }}
+      {{ end }}
+    </title>
   {{ end }}
   {{ partial "head.html" . }}
 </head>
@@ -21,7 +27,7 @@
     </div>
 
     {{ block "footer" . }}
-    {{ partial "footer.html" . }}
+      {{ partial "footer.html" . }}
     {{ end }}
   </div>
 

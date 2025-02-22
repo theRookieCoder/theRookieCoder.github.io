@@ -1,7 +1,19 @@
 :root {
+  /* Colours based on Catppuccin Macchiato  */
+  /* https://catppuccin.com/palette         */
+
+  /* Mantle */
   --background: #1e2030;
+
+  /* Text */
   --foreground: #cad3f5;
+
+  /* Subtext 0 */
+  --subtext: #a5adcb;
+
+  /* Mauve */
   --accent: #c6a0f6;
+
   --radius: 4;
   --font-size: 14pt;
   --line-height: 1.5rem;
@@ -40,7 +52,7 @@ body {
 }
 
 ::placeholder {
-  color: color-mix(in srgb var(--foreground) 50%, black);
+  color: var(--subtext);
 }
 
 h1 {
