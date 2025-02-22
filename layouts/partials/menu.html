@@ -10,7 +10,7 @@
           {{ if eq $menu_item_url $page_url }}
             <li><em>{{ .Name }}</em></li>
           {{ else }}
-            <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+            <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" rel="me" {{- end }}>{{ .Name }}</a></li>
           {{ end }}
         {{ end }}
       {{ end }}
@@ -28,7 +28,7 @@
                     {{ if eq $menu_item_url $page_url }}
                       <li><em>{{ .Name }}</em></li>
                     {{ else }}
-                      <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+                      <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" rel="me" {{- end }}>{{ .Name }}</a></li>
                     {{ end }}
                   {{ end }}
                 {{ end }}
@@ -46,7 +46,7 @@
           {{ if eq $menu_item_url $page_url }}
             <li><em>{{ .Name }}</em></li>
           {{ else }}
-            <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+            <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" rel="me" {{- end }}>{{ .Name }}</a></li>
           {{ end }}
         {{ end }}
       {{ end }}
