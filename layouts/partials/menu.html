@@ -1,7 +1,6 @@
+{{ $currentPage := . }}
 <nav class="navigation-menu">
   <ul class="navigation-menu__inner menu--desktop">
-    {{ $currentPage := . }}
-  
     {{ if or $.Site.Params.showMenuItems ( eq .Site.Params.showMenuItems 0 ) }}
       {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
         {{ if not .HasChildren }}
@@ -11,7 +10,7 @@
           {{ if eq $menu_item_url $page_url }}
             <li><i>{{ .Name }}</i></li>
           {{ else }}
-            <li><a href="{{ .URL }}" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+            <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
           {{ end }}
         {{ end }}
       {{ end }}
@@ -29,7 +28,7 @@
                     {{ if eq $menu_item_url $page_url }}
                       <li><i>{{ .Name }}</i></li>
                     {{ else }}
-                      <li><a href="{{ .URL }}" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+                      <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
                     {{ end }}
                   {{ end }}
                 {{ end }}
@@ -47,7 +46,7 @@
           {{ if eq $menu_item_url $page_url }}
             <li><i>{{ .Name }}</i></li>
           {{ else }}
-            <li><a href="{{ .URL }}" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+            <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
           {{ end }}
         {{ end }}
       {{ end }}

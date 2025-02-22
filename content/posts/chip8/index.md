@@ -4,7 +4,7 @@ date = "2025-01-18"
 lastmod = "2025-02-21"
 author = "theRookieCoder"
 tags = ["chip8", "superchip", "emulator", "rust", "c", "c++"]
-description = "A devlog of my experience writing a desktop CHIP-8 emulator in C, porting it to the Arduboy, porting the desktop app to Rust, adding support for emulating SUPER-CHIP, and finally porting the SUPER-CHIP emulator to C++"
+description = "A devlog of my experience writing a desktop CHIP-8 emulator in C, porting it to the Arduboy, porting the desktop app to Rust, adding support for emulating SUPER-CHIP, and finally porting the SUPER-CHIP emulator to C++."
 +++
 
 {{< image src="meme.avif" alt="CHIP-8 Meme" >}}
