@@ -47,7 +47,7 @@
   margin-top: 0 !important;
   margin-bottom: 15px !important;
   padding-bottom: 15px;
-  border-bottom: 3px dotted var(--accent);
+  border-bottom: 3px dotted var(--sec-accent);
   text-decoration: none !important;
 }
 
@@ -57,7 +57,7 @@
   bottom: 2px;
   display: block;
   width: 100%;
-  border-bottom: 3px dotted var(--accent);
+  border-bottom: 3px dotted var(--sec-accent);
 }
 
 .post-title a {
@@ -68,7 +68,11 @@
   display: block;
   margin-bottom: 20px;
   font-size: 1rem;
-  color: var(--accent);
+  color: var(--sec-accent);
+}
+
+.post-tags a {
+  color: var(--sec-accent);
 }
 
 .table-of-contents {

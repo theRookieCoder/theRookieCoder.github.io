@@ -4,11 +4,16 @@
     <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
   </h1>
   <div class="post-meta">
-    {{- if .Date -}}
+    {{- if or .Lastmod .Date -}}
       <time class="post-date">
-        {{- partial "post-date" . -}}
-        {{- if and $.Site.Params.showLastUpdated .Lastmod -}}
-          &nbsp;{{- partial "post-lastmod" . -}}
+        <!-- If only the modified date is specified -->
+        {{- if and (not .Date) (.Lastmod) -}}
+          {{- partial "post-lastmod" . | title -}}
+        {{ else }}
+          {{- partial "post-date" . -}}
+          {{- if and $.Site.Params.showLastUpdated .Lastmod -}}
+            &nbsp;[{{- partial "post-lastmod" . -}}]
+          {{- end -}}
         {{- end -}}
       </time>
     {{- end -}}
@@ -20,14 +25,14 @@
     {{- end -}}
   </div>
 
-  {{ if .Params.tags }}
+  {{- if .Params.tags -}}
     <span class="post-tags">
-      {{ range .Params.tags }}
+      {{- range .Params.tags -}}
       #<a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">{{ . }}</a>&nbsp;
-      {{ end }}
+      {{- end -}}
     </span>
-  {{ end }}
-  {{ partial "cover.html" . }}
+  {{- end -}}
+  {{- partial "cover.html" . -}}
 
   {{ if (.Params.Toc | default .Site.Params.Toc) }}
     <div class="table-of-contents">

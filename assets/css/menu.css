@@ -29,6 +29,10 @@
   flex-grow: 1 !important;
 }
 
+.filler {
+  flex-grow: 1;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -43,6 +47,16 @@
   color: var(--accent);
   user-select: none;
   cursor: pointer;
+}
+
+@media (min-width: 684px) {
+  .menu__trigger::before {
+    content: "▸";
+  }
+
+  .open .menu__trigger::before {
+    content: "▾";
+  }
 }
 
 .menu__dropdown {
@@ -121,6 +135,14 @@
 @media (max-width: 684px) {
   .navigation-menu {
     margin: 0;
+  }
+
+  .menu__trigger::after {
+    content: "▸";
+  }
+
+  .open .menu__trigger::after {
+    content: "▾";
   }
 
   .navigation-menu__inner {

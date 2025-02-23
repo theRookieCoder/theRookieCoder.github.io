@@ -15,9 +15,11 @@
         {{ end }}
       {{ end }}
       {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
+        <!-- put socials menu to the right -->
+        <div class="filler"></div>
         <li>
           <ul class="menu">
-            <li class="menu__trigger">{{ $.Site.Params.menuMore }}&nbsp;▾</li>
+            <li class="menu__trigger">&nbsp;{{ $.Site.Params.menuMore }}</li>
             <li>
               <ul class="menu__dropdown">
                 {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}

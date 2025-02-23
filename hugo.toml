@@ -13,6 +13,12 @@ style = "catppuccin-macchiato"
 unsafe = true
 
 
+[frontmatter]
+# exclude lastmod and modified from "date"
+# so that it is possible to have a modified data but not a published date
+date = ["date", "publishDate", "pubdate", "published"]
+
+
 [params.logo]
 logoText = "theRookieCoder"
 logoHomeLink = "/"

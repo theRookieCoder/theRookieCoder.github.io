@@ -1,7 +1,6 @@
 +++
 title = "Setup"
-date = 2025-02-22
-lastMod = 2025-02-22
+modified = 2025-02-22
 author = "theRookieCoder"
 tags = []
 +++
