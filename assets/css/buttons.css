@@ -73,19 +73,23 @@ a.button.inline:hover {
 }
 
 a.button.inline::before {
+  margin-right: 4px;
   content: "["
 }
 
 a.button.inline::after {
+  margin-left: 4px;
   content: "]"
 }
 
 a.button.inline.prev::before {
-  content: "← ["
+  margin-right: 4px;
+  content: "⟵ ["
 }
 
 a.button.inline.next::after {
-  content: "] →"
+  margin-left: 4px;
+  content: "] ⟶"
 }
 
 a.read-more,

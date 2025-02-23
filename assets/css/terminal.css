@@ -285,7 +285,7 @@ code {
 }
 
 kbd {
-  border-top: 1px solid color-mix(in srgb, var(--accent) 50%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--accent) 75%, transparent);
   border-left: 1px solid var(--accent);
   border-right: 1px solid var(--accent);
   border-bottom: 3px solid var(--accent);
@@ -337,7 +337,7 @@ sup {
 }
 
 mark {
-  background: color-mix(in srgb, var(--accent) 45%, transparent);
+  background: var(--sec-accent);
   color: var(--foreground);
 }
 
@@ -406,6 +406,6 @@ th {
 hr {
   width: 100%;
   border: none;
-  background: var(--accent);
+  background: var(--sec-accent);
   height: 2px;
 }
