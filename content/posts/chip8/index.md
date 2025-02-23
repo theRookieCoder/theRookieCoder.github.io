@@ -9,7 +9,7 @@ description = "A devlog of my experience writing a desktop CHIP-8 emulator in C,
 
 {{< image src="meme.avif" alt="CHIP-8 Meme" >}}
 
-I first heard of CHIP-8 when I was beginning to learn Rust. A Redditor suggested it as a reasonably-sized but simple project to get started with a new progamming language. I tried to write it in Rust, but was unable to even get the obligatory *IBM logo* program to run; likely due to a lack of Rust knowledge, inexperience with programming, or both. Anyways, I bookmarked the tutorial with the intent of trying it out some other day, and moved on to other projects.
+I first heard of CHIP-8 when I was beginning to learn Rust. A Redditor suggested it as a reasonably-sized but simple project to get started with a new programming language. I tried to write it in Rust, but was unable to even get the obligatory *IBM logo* program to run; likely due to a lack of Rust knowledge, inexperience with programming, or both. Anyways, I bookmarked the tutorial with the intent of trying it out some other day, and moved on to other projects.
 
 Wellll, 3 years have passed since then, and I have become much better at Rust and programming in general. About a year ago, I started learning C in Harvard's [CS50x](https://cs50.harvard.edu/x) course, and I really liked its simplicity and closeness to the bare metal. After completing the course's C assignments, and creating a [small Arduino project](https://github.com/theRookieCoder/ardudraw), I yearned for more C (as one does).
 
@@ -197,9 +197,9 @@ After experiencing the limitations of C, I was interested in learning C++. I dec
 
 My favourite improvements over C are namespaces and classes. I created the `core` namespace, with the machine state and constants like the display dimensions. The core methods are namespaced within the class too. I used classes to abstract away the SDL code, making use of the class destructor to implicitly clean up SDL at the end of the scope.
 
-References meant that there were no longer any pointers to deal with, which I was glad about since I found pointers confusing at times, coming from Rust and its references. `std::array`s did not degrade into pointers like C-style arrays, so I could avoid pointer arithmetic. STL's functional features like interators were a breath of fresh air compared to C, albeit confusing and unintuitive at times, and safe abstractions over functions like `memcpy` and `memmove` are welcome additions. Like Rust's slice methods, STL's move and fill methods made display scrolling easy to implement.
+References meant that there were no longer any pointers to deal with, which I was glad about since I found pointers confusing at times, coming from Rust and its references. `std::array`s did not degrade into pointers like C-style arrays, so I could avoid pointer arithmetic. STL's functional features like iterators were a breath of fresh air compared to C, albeit confusing and unintuitive at times, and safe abstractions over functions like `memcpy` and `memmove` are welcome additions. Like Rust's slice methods, STL's move and fill methods made display scrolling easy to implement.
 
-One major frustration I had was with CMake, which was horrible to learn and use. The official documentation is unhelpful, tutorials that use modern features are sparse, and there is a confluddling number of ways to achieve the same thing.
+One major frustration I had was with CMake, which was horrible to learn and use. The official documentation is unhelpful, tutorials that use modern features are sparse, and there is a confuddling number of ways to achieve the same thing.
 
 C++ was confusing at times too. One behaviour that tripped me up was that it copies values by default, in contrast to Rust's move by default. This really cemented in me that I should be using references wherever possible, especially in range-based for loops. Coming from Rust, I dislike the implementation of `auto`, although I understand that with the looser typing and polymorphism, it would be very difficult to make it work properly.
 

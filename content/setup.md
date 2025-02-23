@@ -48,7 +48,8 @@ I use [Firefox](https://mozilla.org/firefox) as my browser on Linux, Windows, an
 
 - [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager) password manager
 - [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin) ad blocker
-- [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us) custom themes for websites
+- [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us) theming for websites
+- [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color) theming for Firefox's UI
 - [LanguageTool](https://addons.mozilla.org/en-US/firefox/addon/languagetool) spelling/grammar checker
 - [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock) skip sponsor sections in YouTube videos
 - [Return YouTube Dislike](https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes)
@@ -74,8 +75,8 @@ I also use [JetBrains'](https://jetbrains.com) [IntelliJ IDEA](https://jetbrains
 
 ## Terminal and Package Management
 
-I use [Kitty](https://sw.kovidgoyal.net/kitty) as my terminal on Linux and macOS, and Windows Terminal on Windows. For shells, I use [`fish`](https://fishshell.com) on Linux and macOS, and [Nushell](https://nushell.sh) and PowerShell on Windows.
+I use [Kitty](https://sw.kovidgoyal.net/kitty) as my terminal on Linux and macOS, and Windows Terminal on Windows. For shells, I use [fish](https://fishshell.com) on Linux and macOS, and [Nushell](https://nushell.sh) and PowerShell on Windows.
 
-On Linux, I prefer using `dnf` for packages on Fedora. On Debian and derivaties like Ubuntu, I like to use [Nala](https://github.com/volitank/nala) as the APT frontend. My second choice would be [Flatpaks](https://flatpak.org) from [Flathub](https://flathub.org), and if none of those are available, I install and manage AppImages using [GearLever](https://mijorus.it/projects/gearlever).
+On Linux, I prefer using `dnf` for packages on Fedora. On Debian and derivaties like Ubuntu, I like to use [Nala](https://github.com/volitank/nala) as the APT frontend. My second choice would be [Flatpaks](https://flatpak.org) from [Flathub](https://flathub.org), and if none of those are available, I install and manage AppImages using [Gear Lever](https://mijorus.it/projects/gearlever).
 
 On Windows, I use [WinGet](https://learn.microsoft.com/en-us/windows/package-manager) and [Scoop](https://scoop.sh). And on macOS, I use [Homebrew](https://brew.sh).
