@@ -13,6 +13,9 @@
 
 {{ template "_internal/google_analytics.html" . }}
 
+<!-- Google site verification -->
+<meta name="google-site-verification" content="d9MaQOwClq40_6NTuayvo1G0VYdkhna7Do963_mWPBU" />
+
 {{ $css := resources.Match "css/*.css" }}
 {{ range $css }}
   {{ $styles := . | minify | fingerprint }}

@@ -3,7 +3,7 @@ title = "Writing a CHIP-8 emulator"
 date = "2025-01-18"
 modified = "2025-02-21"
 author = "theRookieCoder"
-tags = ["chip8", "superchip", "emulator", "rust", "c", "c++"]
+tags = ["programming", "rust", "c", "c++", "chip8", "superchip", "emulator"]
 description = "A devlog of my experience writing a desktop CHIP-8 emulator in C, porting it to the Arduboy, porting the desktop app to Rust, adding support for emulating SUPER-CHIP, and finally porting the SUPER-CHIP emulator to C++."
 +++
 

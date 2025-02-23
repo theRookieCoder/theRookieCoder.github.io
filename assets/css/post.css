@@ -72,7 +72,12 @@
 }
 
 .post-tags a {
+  text-decoration: none;
   color: var(--sec-accent);
+}
+
+.post-tags a:hover {
+  text-decoration: underline;
 }
 
 .table-of-contents {
