@@ -17,7 +17,7 @@
 
 .header__logo::after {
   content: "";
-  background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 2px, transparent 0, transparent 10px);
+  background: repeating-linear-gradient(90deg, var(--accent) 0 2px, transparent 0 10px);
   display: block;
   width: 100%;
   right: 10px;
@@ -35,7 +35,7 @@
   text-decoration: none;
   background: var(--accent);
   color: var(--background);
-  padding: 5px 10px;
+  padding: 10px 8px 10px 10px;
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
 }

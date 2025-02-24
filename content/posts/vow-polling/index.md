@@ -9,4 +9,4 @@ draft = true
 +++
 
 > A "formal" version of this is available as a technical report I wrote.
-> You can find it <a href="Vow%20Project%20Report.pdf" target="_blank">here.</a>
+> You can find it <a href="vow-project-report.pdf" target="_blank">here.</a>
