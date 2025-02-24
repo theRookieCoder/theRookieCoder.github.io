@@ -84,7 +84,7 @@ figure figcaption.right {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 20px 40px;
   max-width: 864px;
   min-height: 100vh;
   border-right: 1px solid color-mix(in srgb, var(--accent) 10%, transparent);
@@ -125,7 +125,7 @@ iframe[src*="youtube.com"] {
   }
 
   .container {
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
   }
 
   ul,

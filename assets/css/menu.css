@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 20px 1px;
+  margin: 10px 1px;
 }
 
 .navigation-menu__inner {
@@ -33,9 +33,13 @@
   flex-grow: 1;
 }
 
+.menu--mobile {
+  height: 40px !important;
+}
+
 .menu {
   display: flex;
-  height: 40px;
+  height: 20px;
   flex-direction: column;
   position: relative;
   list-style: none;

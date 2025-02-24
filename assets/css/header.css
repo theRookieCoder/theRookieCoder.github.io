@@ -1,13 +1,18 @@
 .header {
   display: flex;
+  position: sticky;
+  top: 0;
+  padding-top: 20px;
+  background: var(--background);
   flex-direction: column;
-  position: relative;
+  z-index: 99;
 }
 
 .header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 10px;
 }
 
 .header__logo {
