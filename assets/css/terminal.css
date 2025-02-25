@@ -5,6 +5,9 @@
   /* Mantle */
   --background: #1e2030;
 
+  /* Crust */
+  --shadow: #181926;
+
   /* Text */
   --foreground: #cad3f5;
 
@@ -49,9 +52,7 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
-  text-size-adjust: 100%;
+  text-size-adjust: none;
 }
 
 ::placeholder {

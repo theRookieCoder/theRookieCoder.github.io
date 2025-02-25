@@ -70,14 +70,11 @@
   flex-direction: column;
   position: absolute;
   background: var(--background);
-  box-shadow: 0 10px var(--background), -10px 10px var(--background), 10px 10px var(--background);
-  color: var(--accent);
+  box-shadow: -10px 10px var(--shadow);
   border: 2px solid var(--accent);
   border-radius: var(--radius);
-  margin: 0;
   padding: 10px;
   top: 10px;
-  left: 0;
   list-style: none;
   z-index: 99;
 }
