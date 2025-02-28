@@ -3,6 +3,7 @@
   position: sticky;
   top: 0;
   padding-top: 20px;
+  font-family: "Space Grotesk";
   background: var(--background);
   flex-direction: column;
   z-index: 99;
@@ -37,10 +38,10 @@
 .logo {
   display: flex;
   align-items: center;
-  text-decoration: none;
   background: var(--accent);
+  font-weight: 600;
   color: var(--background);
-  padding: 8px 8px 8px 10px;
+  padding: 8px 10px 8px 12px;
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
 }
