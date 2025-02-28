@@ -1,7 +1,7 @@
 +++
 title = "Hi there!"
 author = "theRookieCoder"
-updated = "2025-02-23"
+modified = "2025-02-23"
 Toc = false
 +++
 

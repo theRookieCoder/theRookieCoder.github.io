@@ -71,6 +71,7 @@
   position: absolute;
   background: var(--background);
   box-shadow: -10px 10px var(--shadow);
+  color: var(--accent);
   border: 2px solid var(--accent);
   border-radius: var(--radius);
   padding: 10px;
