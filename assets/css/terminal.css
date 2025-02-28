@@ -270,19 +270,16 @@ kbd {
   font-family:
     "JetBrains Mono",
     monospace !important;
-  font-feature-settings: normal;
   font-variant-ligatures: additional-ligatures;
-  font-weight: 500;
   background: color-mix(in srgb, var(--foreground) 5%, transparent);
   color: color-mix(in srgb, var(--foreground) 5%, var(--accent));
-  padding: 2px 4px;
-  margin: 0 2px;
+  padding: 0 4px;
   font-size: 0.8em;
+  border-radius: var(--radius);
 }
 
 code {
   border: 1px solid color-mix(in srgb, var(--foreground) 25%, transparent);
-  border-radius: var(--radius);
 }
 
 kbd {
@@ -290,7 +287,6 @@ kbd {
   border-left: 1px solid var(--accent);
   border-right: 1px solid var(--accent);
   border-bottom: 3px solid var(--accent);
-  border-radius: var(--radius);
 }
 
 code code {
