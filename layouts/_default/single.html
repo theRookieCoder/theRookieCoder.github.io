@@ -28,8 +28,8 @@
   {{- if .Params.tags -}}
     <span class="post-tags">
       {{- range .Params.tags -}}
-      #<a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">{{ . }}</a>&nbsp;
-      {{- end -}}
+        #<a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">{{ . }}</a>
+      {{ end -}}
     </span>
   {{- end -}}
   {{- partial "cover.html" . -}}
