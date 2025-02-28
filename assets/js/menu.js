@@ -17,26 +17,33 @@ window.addEventListener("resize", () => {
   });
 });
 
+handleMenuInteract = (menu, dropdown) => (e) => {
+  e.stopPropagation();
+
+  if (menu.classList.contains("open")) {
+    menu.classList.remove("open");
+  } else {
+    // Close all menus...
+    allMenus.forEach(m => m.classList.remove("open"));
+    // ...before opening the current one
+    menu.classList.add("open");
+  }
+
+  if (dropdown.getBoundingClientRect().right > container.getBoundingClientRect().right) {
+    dropdown.style.left = "auto";
+    dropdown.style.right = 0;
+  }
+}
+
 // Handle desktop menu
 allMenus.forEach(menu => {
   const trigger = menu.querySelector(".menu__trigger");
   const dropdown = menu.querySelector(".menu__dropdown");
 
-  trigger.addEventListener("click", e => {
-    e.stopPropagation();
-
-    if (menu.classList.contains("open")) {
-      menu.classList.remove("open");
-    } else {
-      // Close all menus...
-      allMenus.forEach(m => m.classList.remove("open"));
-      // ...before opening the current one
-      menu.classList.add("open");
-    }
-
-    if (dropdown.getBoundingClientRect().right > container.getBoundingClientRect().right) {
-      dropdown.style.left = "auto";
-      dropdown.style.right = 0;
+  trigger.addEventListener("click", handleMenuInteract(menu, dropdown));
+  trigger.addEventListener("keydown", e => {
+    if (e.code === "Enter") {
+      handleMenuInteract(menu, dropdown)(e);
     }
   });
 

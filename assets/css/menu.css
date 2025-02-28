@@ -51,7 +51,6 @@
   margin-right: 0 !important;
   line-height: 30px;
   color: var(--accent);
-  user-select: none;
   cursor: pointer;
 }
 

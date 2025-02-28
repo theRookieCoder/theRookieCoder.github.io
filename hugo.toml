@@ -5,10 +5,13 @@ theme = ["hugo-video"]
 
 
 [markup]
+
 [markup.tableOfContents]
 startLevel = 1
+
 [markup.highlight]
 style = "catppuccin-macchiato"
+
 [markup.goldmark.renderer]
 unsafe = true
 
