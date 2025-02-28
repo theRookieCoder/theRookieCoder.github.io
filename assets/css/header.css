@@ -1,18 +1,19 @@
 .header {
   display: flex;
+  flex-direction: column;
+
   position: sticky;
   top: 0;
   padding-top: 20px;
-  font-family: "Space Grotesk";
+
   background: var(--background);
-  flex-direction: column;
+  font-family: "Space Grotesk";
   z-index: 99;
 }
 
 .header__inner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
   padding-bottom: 10px;
 }
 
@@ -23,25 +24,21 @@
 
 .header__logo::after {
   content: "";
-  background: repeating-linear-gradient(90deg, var(--accent) 0 2px, transparent 0 10px);
-  display: block;
+  background: repeating-linear-gradient(to right, var(--accent) 0 2px, transparent 0 10px);
   width: 100%;
-  right: 10px;
 }
 
 .header__logo a {
-  flex: 0 0 auto;
-  max-width: 100%;
   text-decoration: none;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
   background: var(--accent);
-  font-weight: 600;
   color: var(--background);
+  font-weight: 600;
+
   padding: 8px 10px 8px 12px;
+
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
 }
