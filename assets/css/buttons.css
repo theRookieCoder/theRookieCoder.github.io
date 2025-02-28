@@ -82,9 +82,17 @@ a.button.inline::after {
   content: "]"
 }
 
+a.button.inline.prev::after {
+  margin-right: 20px !important;
+}
+
 a.button.inline.prev::before {
   margin-right: 4px;
   content: "⟵ ["
+}
+
+a.button.inline.next::before {
+  margin-left: 20px !important;
 }
 
 a.button.inline.next::after {
