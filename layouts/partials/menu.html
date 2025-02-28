@@ -1,56 +1,53 @@
-{{ $currentPage := . }}
+{{ $currentPageUrl := .RelPermalink | relLangURL }}
 <nav class="navigation-menu">
   <ul class="navigation-menu__inner menu--desktop">
-    {{ if or $.Site.Params.showMenuItems ( eq .Site.Params.showMenuItems 0 ) }}
+    {{ if or $.Site.Params.showMenuItems ( gt .Site.Params.showMenuItems 0 ) }}
       {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
         {{ if not .HasChildren }}
-          {{ $menu_item_url := .URL | relLangURL }}
-          {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
-          
-          {{ if eq $menu_item_url $page_url }}
-            <li><em>{{ .Name }}</em></li>
-          {{ else }}
-            <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" rel="me" {{- end }}>{{ .Name }}</a></li>
-          {{ end }}
+          <li>
+            <!-- Only link to pages that are not the current page -->
+            {{ if eq (.URL | relLangURL) $currentPageUrl }}
+              <em>{{ .Name }}</em>
+            {{ else }}
+              <a href="{{ .URL }}"
+                {{- if or .Params.NewTab (strings.HasPrefix .URL "http") -}}
+                  target="_blank"
+                {{- end -}}
+                {{- if strings.HasPrefix .URL "http" -}}
+                  rel="me"
+                {{- end -}}>{{ .Name }}</a>
+            {{ end }}
+          </li>
         {{ end }}
       {{ end }}
+
       {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
         <!-- put socials menu to the right -->
-        <div class="filler"></div>
-        <li>
-          <ul class="menu">
-            <li class="menu__trigger" tabindex="0">&nbsp;{{ $.Site.Params.menuMore }}</li>
-            <li>
-              <ul class="menu__dropdown">
-                {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
-                  {{ if not .HasChildren }}
-                    {{ $menu_item_url := .URL | relLangURL }}
-                    {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
-                    
-                    {{ if eq $menu_item_url $page_url }}
-                      <li><em>{{ .Name }}</em></li>
-                    {{ else }}
-                      <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" rel="me" {{- end }}>{{ .Name }}</a></li>
-                    {{ end }}
+        <div class="spacer"></div>
+
+        <li><ul class="menu">
+          <li class="menu__trigger" tabindex="0">&nbsp;{{ $.Site.Params.menuMore }}</li>
+          <li><ul class="menu__dropdown">
+            {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
+              {{ if not .HasChildren }}
+                <li>
+                  <!-- Only link to pages that are not the current page -->
+                  {{ if eq (.URL | relLangURL) $currentPageUrl }}
+                    <em>{{ .Name }}</em>
+                  {{ else }}
+                    <a href="{{ .URL }}"
+                      {{- if or .Params.NewTab (strings.HasPrefix .URL "http") -}}
+                        target="_blank"
+                      {{- end -}}
+                      {{- if strings.HasPrefix .URL "http" -}}
+                        rel="me"
+                      {{- end -}}>{{ .Name }}</a>
                   {{ end }}
-                {{ end }}
-              </ul>
-            </li>
-          </ul>
-        </li>
-      {{ end }}
-    {{ else }}
-      {{ range $.Site.Menus.main }}
-        {{ if not .HasChildren }}
-          {{ $menu_item_url := .URL | relLangURL }}
-          {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
-          
-          {{ if eq $menu_item_url $page_url }}
-            <li><em>{{ .Name }}</em></li>
-          {{ else }}
-            <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" rel="me" {{- end }}>{{ .Name }}</a></li>
-          {{ end }}
-        {{ end }}
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul></li>
+        </ul></li>
       {{ end }}
     {{ end }}
   </ul>

@@ -1,18 +1,18 @@
-{{ $currentPage := . }}
+{{ $currentPageUrl := .RelPermalink | relLangURL }}
 <ul class="menu menu--mobile">
   <li class="menu__trigger">Menu&nbsp;</li>
   <li>
     <ul class="menu__dropdown">
       {{ range $.Site.Menus.main }}
         {{ if not .HasChildren }}
-          {{ $menu_item_url := .URL | relLangURL }}
-          {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
-
-          {{ if eq $menu_item_url $page_url }}
-            <li><em>{{ .Name }}</em></li>
-          {{ else }}
-            <li><a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" rel="me" {{- end }}>{{ .Name }}</a></li>
-          {{ end }}
+          <li>
+            <!-- Only link to pages that are not the current page -->
+            {{- if eq (.URL | relLangURL) $currentPageUrl -}}
+              <em>{{ .Name }}</em>
+            {{- else -}}
+              <a href="{{ .URL }}" {{ if or .Params.NewTab (strings.HasPrefix .URL "http") -}} target="_blank" rel="me" {{- end }}>{{ .Name }}</a>
+            {{- end -}}
+          </li>
         {{ end }}
       {{ end }}
     </ul>

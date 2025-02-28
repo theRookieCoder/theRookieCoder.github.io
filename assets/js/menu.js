@@ -17,8 +17,8 @@ window.addEventListener("resize", () => {
   });
 });
 
-handleMenuInteract = (menu, dropdown) => (e) => {
-  e.stopPropagation();
+handleMenuInteract = (menu, dropdown) => (event) => {
+  event.stopPropagation();
 
   if (menu.classList.contains("open")) {
     menu.classList.remove("open");
@@ -41,11 +41,11 @@ allMenus.forEach(menu => {
   const dropdown = menu.querySelector(".menu__dropdown");
 
   trigger.addEventListener("click", handleMenuInteract(menu, dropdown));
-  trigger.addEventListener("keydown", e => {
-    if (e.code === "Enter") {
-      handleMenuInteract(menu, dropdown)(e);
+  trigger.addEventListener("keydown", event => {
+    if (event.code === "Enter") {
+      handleMenuInteract(menu, dropdown)(event);
     }
   });
 
-  dropdown.addEventListener("click", e => e.stopPropagation());
+  dropdown.addEventListener("click", event => event.stopPropagation());
 });
