@@ -26,7 +26,7 @@
         <div class="spacer"></div>
 
         <li><ul class="menu">
-          <li class="menu__trigger" tabindex="0">&nbsp;{{ $.Site.Params.menuMore }}</li>
+          <li class="menu__trigger" tabindex="0">{{ $.Site.Params.menuMore }}&nbsp;</li>
           <li><ul class="menu__dropdown">
             {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
               {{ if not .HasChildren }}

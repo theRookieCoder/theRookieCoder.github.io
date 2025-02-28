@@ -36,11 +36,11 @@
   cursor: pointer;
 }
 
-.menu--desktop .menu__trigger::before {
+.menu__trigger::after {
   content: "▸";
 }
 
-.menu--desktop .open .menu__trigger::before {
+.open .menu__trigger::after {
   content: "▾";
 }
 
@@ -89,14 +89,6 @@
   height: 100%;
   /* the line height centres the text vertically */
   line-height: 35px;
-}
-
-.menu--mobile .menu__trigger::after {
-  content: "▸";
-}
-
-.menu--mobile .open .menu__trigger::after {
-  content: "▾";
 }
 
 @media (max-width: 684px) {
