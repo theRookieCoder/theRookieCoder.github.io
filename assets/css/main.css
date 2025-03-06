@@ -121,7 +121,7 @@ iframe[src*="youtube.com"] {
 
   ul,
   ol {
-    margin-left: 20px;
+    margin-left: 0;
   }
 }
 

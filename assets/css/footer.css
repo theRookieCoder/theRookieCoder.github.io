@@ -2,12 +2,13 @@
   padding: 40px 0;
   font-family: "Space Grotesk";
   color: var(--subtext);
+  font-size: 1rem;
+  line-height: 150%;
 }
 
 .footer__inner {
   width: 100%;
   text-align: center;
-  line-height: 150%;
 }
 
 .footer a {

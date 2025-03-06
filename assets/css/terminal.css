@@ -98,6 +98,7 @@ table {
 
 a {
   color: var(--accent);
+  text-decoration: 1px underline;
 }
 
 button {
@@ -245,10 +246,10 @@ figure figcaption {
 
 ul,
 ol {
-  margin-left: 4ch;
-  padding: 0;
+  margin-left: 2ch;
 }
 
+/* don't add additional top margin for nested lists */
 ul ul,
 ul ol,
 ol ul,
