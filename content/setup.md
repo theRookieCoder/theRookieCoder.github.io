@@ -22,7 +22,7 @@ I use the [Framework](https://frame.work) [Laptop 13](https://frame.work/laptop1
 
 [AMD Ryzen 7840U]: https://www.amd.com/en/products/processors/laptop/ryzen/7000-series/amd-ryzen-7-7840u.html
 
-The only part of this laptop that I've changed is the WiFi card, I replaced the stock MediaTek card with an Intel AX210 as I had connectivity issues.
+The only part of this laptop I have changed is the WiFi card; I replaced the stock MediaTek/AMD RZ616 with an Intel AX210 as I had connectivity issues.
 
 ### Expansion Cards
 
@@ -32,15 +32,15 @@ The only part of this laptop that I've changed is the WiFi card, I replaced the 
 - HDMI
 - microSD card reader
 
-I usually go with a USB-C on both sides for charging, a USB-A with my mouse's wireless receiver, and the microSD reader or ethernet. I only use the HDMI card when presenting something or connecting to secondary monitor.
+I usually go with a USB-C on both sides for charging, a USB-A with my mouse's wireless receiver, and either the microSD reader or ethernet port. I only use the HDMI card when presenting or connecting to secondary monitor.
 
 # Software
 
-For colours, I like the [Catppuccin](https://catppuccin.com) theme, specifically the Macchiato flavour. That is what I used to theme this website as well!
+For colours, I like the [Catppuccin](https://catppuccin.com) theme, specifically the Macchiato flavour. You are seeing it right now, because that is what I used to theme this website!
 
 ## Operating System
 
-I daily-drive the latest version of [Fedora Linux](https://fedoraproject.org), and I have Windows 11 on the other partition of my dual-boot setup. On Fedora, I use KDE as my desktop environment; the only theming I have done is using the [Catppuccin](https://github.com/catppuccin/kde) colour theme.
+I daily-drive the latest version of [Fedora Linux](https://fedoraproject.org), and I have Windows 11 on the other partition of my dual-boot setup. On Fedora, I use KDE as my desktop environment; the only theming I have done is using Catppuccin colours.
 
 ## Browser (Firefox)
 
@@ -58,7 +58,7 @@ I use [Firefox](https://mozilla.org/firefox) as my browser on Linux, Windows, an
 
 ## <abbr title="Integrated Development Environment">IDE</abbr>
 
-I primarily use [Visual Studio Code](https://code.visualstudio.com). These are the extensions I use, excluding LSPs
+I primarily use [Visual Studio Code](https://code.visualstudio.com). These are the extensions I use, excluding language-specific ones
 
 - [Catppuccin](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc) and [Catppuccin Perfect Icons](https://marketplace.visualstudio.com/items?itemName=thang-nm.catppuccin-perfect-icons)
 - [Discord Rich Presence](https://marketplace.visualstudio.com/items?itemName=LeonardSSH.vscord)
@@ -67,7 +67,7 @@ I primarily use [Visual Studio Code](https://code.visualstudio.com). These are t
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare)
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
-I also use [JetBrains'](https://jetbrains.com) [IntelliJ IDEA](https://jetbrains.com/idea) for Java, [CLion](https://jetbrains.com/clion) for C++, and sometimes [RustRover](https://jetbrains.com/rust) for debugging Rust. These are the extensions
+I also use [JetBrains'](https://jetbrains.com) [IntelliJ IDEA](https://jetbrains.com/idea) for Java, [CLion](https://jetbrains.com/clion) for C++, and sometimes [RustRover](https://jetbrains.com/rust) for Rust. These are the extensions I use
 
 - [Catppuccin Theme](https://plugins.jetbrains.com/plugin/18682-catppuccin-theme)
 - [Catppuccin Icons](https://plugins.jetbrains.com/plugin/23029-catppuccin-icons)
@@ -77,6 +77,6 @@ I also use [JetBrains'](https://jetbrains.com) [IntelliJ IDEA](https://jetbrains
 
 I use [Kitty](https://sw.kovidgoyal.net/kitty) as my terminal on Linux and macOS, and Windows Terminal on Windows. For shells, I use [fish](https://fishshell.com) on Linux and macOS, and [Nushell](https://nushell.sh) and PowerShell on Windows.
 
-On Linux, I prefer using `dnf` for packages on Fedora. On Debian and derivaties like Ubuntu, I like to use [Nala](https://github.com/volitank/nala) as the APT frontend. My second choice would be [Flatpaks](https://flatpak.org) from [Flathub](https://flathub.org), and if none of those are available, I install and manage AppImages using [Gear Lever](https://mijorus.it/projects/gearlever).
+On Fedora I use `dnf`, and on Debian and derivaties like Ubuntu, I like to use [Nala](https://github.com/volitank/nala) as the APT frontend. My second choice is [Flatpaks](https://flatpak.org) from [Flathub](https://flathub.org). If none of those are available, I install and manage AppImages using [Gear Lever](https://mijorus.it/projects/gearlever).
 
 On Windows, I use [WinGet](https://learn.microsoft.com/en-us/windows/package-manager) and [Scoop](https://scoop.sh). And on macOS, I use [Homebrew](https://brew.sh).
