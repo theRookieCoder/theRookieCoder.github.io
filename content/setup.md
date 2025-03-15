@@ -42,6 +42,14 @@ For colours, I like the [Catppuccin](https://catppuccin.com) theme, specifically
 
 I daily-drive the latest version of [Fedora Linux](https://fedoraproject.org), and I have Windows 11 on the other partition of my dual-boot setup. On Fedora, I use KDE as my desktop environment; the only theming I have done is using Catppuccin colours.
 
+## Terminal and Package Management
+
+I use [kitty](https://sw.kovidgoyal.net/kitty) as my terminal on Linux and macOS, and [Windows Terminal](https://aka.ms/terminal) on Windows. For shells, I use [fish](https://fishshell.com) on Linux and macOS, and [Nushell](https://nushell.sh) and PowerShell on Windows. Checkout my [dotfiles](https://github.com/theRookieCoder/dotfiles) to see how I configure *fish* and *kitty*.
+
+On Fedora I use `dnf`, and on Debian and derivaties like Ubuntu, I like to use [Nala](https://github.com/volitank/nala) as the APT frontend. My second choice is [Flatpaks](https://flatpak.org) from [Flathub](https://flathub.org). If none of those are available, I install and manage AppImages using [Gear Lever](https://mijorus.it/projects/gearlever).
+
+On Windows, I use [WinGet](https://learn.microsoft.com/en-us/windows/package-manager) and [Scoop](https://scoop.sh). And on macOS, I use [Homebrew](https://brew.sh).
+
 ## Browser (Firefox)
 
 I use [Firefox](https://mozilla.org/firefox) as my browser on Linux, Windows, and Android. These are the add-ons I use
@@ -72,11 +80,3 @@ I also use [JetBrains'](https://jetbrains.com) [IntelliJ IDEA](https://jetbrains
 - [Catppuccin Theme](https://plugins.jetbrains.com/plugin/18682-catppuccin-theme)
 - [Catppuccin Icons](https://plugins.jetbrains.com/plugin/23029-catppuccin-icons)
 - [VSCode Keymap](https://plugins.jetbrains.com/plugin/12062-vscode-keymap)
-
-## Terminal and Package Management
-
-I use [Kitty](https://sw.kovidgoyal.net/kitty) as my terminal on Linux and macOS, and Windows Terminal on Windows. For shells, I use [fish](https://fishshell.com) on Linux and macOS, and [Nushell](https://nushell.sh) and PowerShell on Windows.
-
-On Fedora I use `dnf`, and on Debian and derivaties like Ubuntu, I like to use [Nala](https://github.com/volitank/nala) as the APT frontend. My second choice is [Flatpaks](https://flatpak.org) from [Flathub](https://flathub.org). If none of those are available, I install and manage AppImages using [Gear Lever](https://mijorus.it/projects/gearlever).
-
-On Windows, I use [WinGet](https://learn.microsoft.com/en-us/windows/package-manager) and [Scoop](https://scoop.sh). And on macOS, I use [Homebrew](https://brew.sh).

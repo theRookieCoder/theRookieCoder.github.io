@@ -219,9 +219,9 @@ input[type="checkbox"]:checked {
 img {
   display: block;
   max-width: 100%;
-  border: 8px solid var(--accent);
+  border: 6px solid var(--accent);
   border-radius: var(--radius);
-  padding: 8px;
+  padding: 4px;
   overflow: hidden;
 }
 
@@ -275,6 +275,7 @@ kbd {
   background: color-mix(in srgb, var(--foreground) 5%, transparent);
   color: color-mix(in srgb, var(--foreground) 5%, var(--accent));
   padding: 0 4px;
+  margin: 2px;
   font-size: 0.8em;
   border-radius: var(--radius);
 }
