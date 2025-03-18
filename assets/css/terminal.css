@@ -168,6 +168,11 @@ select {
   appearance: none;
 }
 
+::selection {
+  color: var(--shadow);
+  background-color: var(--sec-accent);
+}
+
 input[type="checkbox"] {
   width: auto;
 }
