@@ -44,10 +44,10 @@ I ended up making a ton of changes, so I only listed some notable ones here. You
 - Open all external links in a new tab. I personally hate it when I'm reading something on a website and the link replaces the tab I was reading on.
 
 - Round the logo in the header, and pad it better.
-  ![](header-logo.png)
+  ![](header-logo.avif)
 
 - Don't link to the current page in the header and menu, instead italicise the text.
-  ![](header-current-page.png)
+  ![](header-current-page.avif)
 
 - Make the header sticky, i.e. it stays at the top of the screen even after you scroll.
 
