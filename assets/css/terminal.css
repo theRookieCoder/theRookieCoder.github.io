@@ -417,3 +417,7 @@ hr {
   background: var(--sec-accent);
   height: 2px;
 }
+
+details>summary {
+  cursor: pointer;
+}
