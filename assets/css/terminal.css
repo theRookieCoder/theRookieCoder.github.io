@@ -361,6 +361,10 @@ blockquote::before {
   color: var(--accent);
 }
 
+blockquote~blockquote {
+  border-top: none !important;
+}
+
 blockquote p:first-child {
   margin-top: 0;
 }
