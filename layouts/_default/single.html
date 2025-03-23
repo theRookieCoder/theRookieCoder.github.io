@@ -30,8 +30,8 @@
       {{- range .Params.tags -}}
         #<a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">
           {{- . -}}
-        </a>&nbsp;
-      {{ end -}}
+        </a>&ensp;
+      {{- end -}}
     </span>
   {{- end -}}
   {{- partial "cover.html" . -}}
