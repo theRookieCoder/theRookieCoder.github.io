@@ -111,3 +111,27 @@ a.read-more:active {
   max-width: 100%;
   text-decoration: none;
 }
+
+button.segmented-button {
+  color: var(--foreground);
+  border-width: 3px;
+  padding: 0 12px;
+  vertical-align: middle;
+}
+
+/* Left-most element */
+button.segmented-button:first-of-type {
+  border-radius: 20pt 0 0 20pt;
+  border-right: none;
+}
+
+/* Middle element */
+button.segmented-button:not(:first-of-type):not(:last-of-type) {
+  border-radius: 0;
+  border-right: none;
+}
+
+/* Right-most element */
+button.segmented-button:last-of-type {
+  border-radius: 0 20pt 20pt 0;
+}

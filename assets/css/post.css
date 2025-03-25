@@ -135,6 +135,10 @@ h6:hover .hanchor {
   visibility: visible;
 }
 
+.font-selector button {
+  height: 40px;
+}
+
 .footnotes {
   color: var(--subtext);
 }

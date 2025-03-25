@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Atkinson Hyperlegible Next";
   src: url(/fonts/atkinson-hyperlegible-next-variable.woff2) format(woff2);
-  font-weight: 400 700;
+  font-weight: normal bold;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Space Grotesk";
   src: url(/fonts/space-grotesk-variable.woff2) format(woff2);
-  font-weight: 400 700;
+  font-weight: normal bold;
   font-display: swap;
 }
 
@@ -16,5 +16,27 @@
   font-family: "JetBrains Mono";
   src: url(/fonts/jetbrains-mono-medium.woff2) format(woff2);
   font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url(/fonts/libre-baskerville-regular.ttf) format(truetype);
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url(/fonts/libre-baskerville-bold.ttf) format(truetype);
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url(/fonts/libre-baskerville-italic.ttf) format(truetype);
+  font-weight: normal;
+  font-style: italic;
   font-display: swap;
 }

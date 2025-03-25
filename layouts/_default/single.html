@@ -36,6 +36,19 @@
   {{- end -}}
   {{- partial "cover.html" . -}}
 
+  <!-- <div class="font-selector">
+    <button class="segmented-button" style="font: var(--body-serif);"
+      onclick="document.body.style.setProperty('--body-font', 'var(--body-serif)')">
+      Serif
+    </button><button class="segmented-button" style="font: var(--body-sans);"
+      onclick="document.body.style.setProperty('--body-font', 'var(--body-sans)')">
+      Sans
+    </button><button class="segmented-button" style="font: var(--body-mono);"
+      onclick="document.body.style.setProperty('--body-font', 'var(--body-mono)')">
+      Mono
+    </button>
+  </div> -->
+  
   {{ if (.Params.Toc | default .Site.Params.Toc) }}
     <div class="table-of-contents">
       <details open>
