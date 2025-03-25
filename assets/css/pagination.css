@@ -1,4 +1,5 @@
 .pagination {
+  font-family: "Space Grotesk";
   margin-top: 50px;
 }
 
@@ -46,6 +47,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-decoration: none;
+}
+
+.pagination__separator {
+  font-family: "JetBrains Mono";
 }
 
 .button {

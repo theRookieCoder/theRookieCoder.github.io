@@ -11,7 +11,7 @@
       </a>
     {{ end }}
     {{ if and .NextInSection .PrevInSection }}
-      ::
+      <span class="pagination__separator">::</span>
     {{ end }}
     {{ if .PrevInSection }}
       <a href="{{ .PrevInSection.Permalink }}" class="button inline next">

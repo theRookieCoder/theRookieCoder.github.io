@@ -30,13 +30,14 @@
 }
 
 .post-meta {
-  font-size: 1rem;
+  font: 500 12pt "Atkinson Hyperlegible Next";
   margin-bottom: 10px;
   color: var(--subtext);
 }
 
 .post-meta>*:not(:first-child)::before {
   content: "::";
+  font-family: "JetBrains Mono";
   display: inline-block;
   margin: 0 8px;
 }
@@ -65,9 +66,9 @@
 }
 
 .post-tags {
+  font: 500 12pt "Atkinson Hyperlegible Next";
   display: block;
   margin-bottom: 20px;
-  font-size: 1rem;
   color: var(--sec-accent);
 }
 

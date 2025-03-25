@@ -7,7 +7,7 @@
   padding-top: 20px;
 
   background: var(--background);
-  font-family: "Space Grotesk";
+  font: 14pt "Space Grotesk";
   z-index: 99;
 }
 
