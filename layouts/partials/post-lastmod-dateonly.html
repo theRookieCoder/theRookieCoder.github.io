@@ -1,4 +1,4 @@
-{{- $date := .Date -}}
+{{- $date := .Lastmod -}}
 {{- with .Params.dateFormat -}}
   {{- .Store.Set "date" ($date | time.Format . ) -}}
 {{- else -}}

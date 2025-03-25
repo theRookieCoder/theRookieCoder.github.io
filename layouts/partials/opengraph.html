@@ -1,0 +1,87 @@
+{{/* Inspired by https://aarol.dev/posts/hugo-og-image */}}
+
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="
+  {{- with .Description }}
+    {{- . -}}
+  {{- else -}}
+    {{- if .IsPage -}}
+      {{- .Summary -}}
+    {{- else -}}
+      {{- with .Site.Params.description -}}
+        {{- . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}" />
+<meta property="og:type" content="
+  {{- if .IsPage -}}
+    article
+  {{- else -}}
+    website
+  {{- end -}}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:site_name" content="theRookieCoder" />
+
+{{- if .IsPage -}}
+  {{ warnf "%s" .Path }}
+  {{- if eq .Path "/me" -}}
+    <meta property="profile:first_name" content="Ilesh" />
+    <meta property="profile:last_name" content="Thiada" />
+    <meta property="profile:username" content="theRookieCoder" />
+  {{- else -}}
+    {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+    <meta property="article:section" content="{{ .Section }}" />
+    {{- with .PublishDate -}}
+      <meta property="article:published_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+    {{- end -}}
+    {{- with .Lastmod -}}
+      <meta property="article:modified_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+    {{- end -}}
+    {{- with .Params.Author }}
+      <meta property="article:author" content="{{ . }}" />
+    {{- end -}}
+    {{- with .Params.Tags }}
+      {{- range . -}}
+        <meta property="article:tags" content="{{ . }}" />
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if .IsPage -}}
+  {{ $base := resources.Get "og-image.png" }}
+  {{ $titleFont := resources.Get "space-grotesk-bold.ttf" }}
+  {{ $dateFont := resources.Get "atkinson-hyperlegible-regular.ttf" }}
+  {{ if .Date }}
+    {{ .Store.Set "date" (partial "post-date.html" . ) }}
+  {{ else }}
+    {{ .Store.Set "date" (partial "post-lastmod-dateonly.html" . ) }}
+  {{ end }}
+
+  {{ $img := $base.Filter (slice
+    (images.Text (strings.ToUpper .Page.Title)
+      (dict
+        "color" "#c6a0f6"
+        "size" 64
+        "font" $titleFont
+        "x" 100
+        "y" 300
+      )
+    )
+    (images.Text (.Store.Get "date")
+      (dict
+        "color" "#939ab7"
+        "size" 48
+        "font" $dateFont
+        "x" 100
+        "y" 473
+      )
+    )
+  ) }}
+
+  {{ $img = resources.Copy (path.Join .Page.RelPermalink "og-image.png") $img }}
+  <meta property="og:image" content="{{ $img.Permalink }}">
+  <meta property="og:image:width" content="{{ $img.Width }}" />
+  <meta property="og:image:height" content="{{ $img.Height }}" />
+{{- end -}}
