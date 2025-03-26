@@ -11,10 +11,12 @@
 {{ end }}
 <link rel="canonical" href="{{ .Permalink }}" />
 
-{{ template "_internal/google_analytics.html" . }}
-
 <!-- Google site verification -->
 <meta name="google-site-verification" content="d9MaQOwClq40_6NTuayvo1G0VYdkhna7Do963_mWPBU" />
+
+{{ range readDir "static/fonts" }}
+  <link rel="preload" href="/fonts/{{ .Name }}" as="font" type="font/{{ strings.Trim (path.Ext .Name) "." }}">
+{{ end }}
 
 {{ $css := resources.Match "css/**.css" | resources.Concat "styles.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">
