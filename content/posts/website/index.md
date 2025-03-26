@@ -1,6 +1,7 @@
 +++
 title = "Creating this Website"
 date = "2025-03-23"
+modified = "2025-03-26"
 author = "theRookieCoder"
 tags = ["markdown", "html", "css", "hugo"]
 description = "I think a website is an important part of your online image --- it is a blank canvas for you to showcase yourself and your thoughts. I finally got around to creating a personal website last month, so here is how I made it."
@@ -44,10 +45,13 @@ I ended up making a ton of changes, so I only listed some notable ones here. You
 - Open all external links in a new tab. I personally hate it when I'm reading something on a website and the link replaces the tab I was reading on.
 
 - Round the logo in the header, and pad it better.
-  ![](header-logo.avif)
+  !["theRookieCoder" in a filled magenta rectangle, with slight rounding in the left corners](header-logo.avif)
 
 - Don't link to the current page in the header and menu, instead italicise the text.
-  ![](header-current-page.avif)
+  ![The website's menu in the setup page, with links to "Home" and "About Me", but no link to "My Setup"](header-current-page.avif)
+
+- Improve OpenGraph metadata tags, and dynamically generate `og:image`s --- the link previews that shows up on social media --- for every post.
+  ![The OpenGraph image for this post, with the title "Creating this Website" and date "2025-03-23"](og-image.png)
 
 - Make the header sticky, i.e. it stays at the top of the screen even after you scroll.
 
