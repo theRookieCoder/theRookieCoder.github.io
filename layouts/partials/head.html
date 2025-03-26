@@ -15,7 +15,10 @@
 <meta name="google-site-verification" content="d9MaQOwClq40_6NTuayvo1G0VYdkhna7Do963_mWPBU" />
 
 {{ range readDir "static/fonts" }}
-  <link rel="preload" href="/fonts/{{ .Name }}" as="font" type="font/{{ strings.Trim (path.Ext .Name) "." }}">
+  {{/* Don't preload unused serif fonts */}}
+  {{ if not (strings.Contains .Name "libre") }}
+    <link rel="preload" href="/fonts/{{ .Name }}" as="font" type="font/{{ strings.Trim (path.Ext .Name) "." }}">
+  {{ end }}
 {{ end }}
 
 {{ $css := resources.Match "css/**.css" | resources.Concat "styles.css" | minify | fingerprint }}
