@@ -52,7 +52,7 @@ jobs:
         run: |
           sudo apt install pngquant
           shopt -s globstar
-          pngquant --speed 1 ./public/**.png --ext .png --force
+          pngquant --speed 1 ./public/**/*.png --ext .png --force
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
