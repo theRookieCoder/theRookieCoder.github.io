@@ -21,7 +21,6 @@
   --sec-accent: #b7bdf8;
 
   --radius: 5px;
-  --line-height: 1.5rem;
 
   --body-serif: 13pt "Libre Baskerville", serif;
   --body-sans: 15pt "Atkinson Hyperlegible Next", sans-serif;
@@ -36,6 +35,30 @@ html {
   box-sizing: border-box;
 }
 
+.container {
+  padding: 40px;
+  max-width: 850px;
+}
+
+@media(max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.container.full,
+.container.center {
+  margin: 0 auto;
+}
+
+.container.full {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
 *,
 *::before,
 *::after {
@@ -48,7 +71,7 @@ body {
   margin: 0;
   padding: 0;
   font: var(--body-font);
-  line-height: var(--line-height);
+  line-height: 1.4;
   background-color: var(--background);
   color: var(--foreground);
   text-rendering: optimizeLegibility;
@@ -75,6 +98,31 @@ h2,
 h3,
 h4,
 h5,
+h6 {
+  font: bold 18pt "Space Grotesk";
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  margin: 20px 0;
+  scroll-margin-top: 130px;
+}
+
+@media(max-width: 600px) {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: 80px !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
 h6,
 p,
 ul,
@@ -83,7 +131,7 @@ img,
 figure,
 video,
 table {
-  margin: calc(var(--line-height) * 1.2) 0;
+  margin: 30px 0;
 }
 
 a {
@@ -134,7 +182,7 @@ fieldset select,
 fieldset textarea,
 fieldset label,
 fieldset button {
-  margin-top: calc(var(--line-height) * 0.5);
+  margin-top: 16px;
   width: 100%;
 }
 
@@ -412,6 +460,7 @@ hr {
 summary {
   font: bold 16pt "Space Grotesk";
 }
+
 details>summary {
   cursor: pointer;
 }

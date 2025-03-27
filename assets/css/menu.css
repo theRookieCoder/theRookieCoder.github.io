@@ -91,7 +91,7 @@
   line-height: 35px;
 }
 
-@media (max-width: 684px) {
+@media (max-width: 600px) {
   .navigation-menu {
     display: none;
   }
