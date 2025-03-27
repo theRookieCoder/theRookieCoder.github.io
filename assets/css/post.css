@@ -31,6 +31,7 @@
 
 .post-meta {
   font: 500 12pt "Atkinson Hyperlegible Next";
+  line-height: 1.2;
   margin-bottom: 10px;
   color: var(--subtext);
 }
@@ -67,6 +68,7 @@
 
 .post-tags {
   font: 500 12pt "Atkinson Hyperlegible Next";
+  line-height: 1.2;
   display: block;
   margin-bottom: 20px;
   color: var(--sec-accent);
