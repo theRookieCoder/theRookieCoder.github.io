@@ -32,9 +32,9 @@ I discovered [Hugo](https://gohugo.io), its idea is simple; you select a theme, 
 # Theming
 
 The most important part of theming is colours. I like using the [Catppuccin](https://catppuccin.com) Macchiato theme, so I decided to use it here. Fonts are also really important, most of what you see here is text after all. I decided to use 3 of my favourite fonts ---
-<span style='font-family: "Space Grotesk" !important;'>[Space Grotesk](https://fonts.floriankarsten.com/space-grotesk)</span> in the header, footer, and headings;
-<span style='font-family: "JetBrains Mono" !important; font-size: 0.9em;'>[JetBrains Mono](https://www.jetbrains.com/lp/mono)</span> for code; and
-<span style='font-family: "Atkinson Hyperlegible Next" !important;'>[Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont)</span> for other elements and body text.
+<span style='font-family: "Space Grotesk" !important;'>[Space Grotesk](https://fonts.floriankarsten.com/space-grotesk) in the header, footer, and headings;</span>
+<span style='font-family: "JetBrains Mono" !important; font-size: 0.9em;'>[JetBrains Mono](https://www.jetbrains.com/lp/mono) for code; and</span>
+<span style='font-family: "Atkinson Hyperlegible Next" !important;'>[Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont) for other elements and body text.</span>
 
 # Customisation
 
