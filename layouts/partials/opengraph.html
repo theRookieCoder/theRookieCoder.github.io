@@ -51,7 +51,7 @@
 {{- if .IsPage -}}
   {{ $base := resources.Get "og-image.png" }}
   {{ $titleFont := resources.Get "space-grotesk-bold.ttf" }}
-  {{ $dateFont := resources.Get "atkinson-hyperlegible-regular.ttf" }}
+  {{ $dateFont := resources.Get "atkinson-hyperlegible-next-medium.ttf" }}
   {{ if .Date }}
     {{ .Store.Set "date" (partial "post-date.html" . ) }}
   {{ else }}
