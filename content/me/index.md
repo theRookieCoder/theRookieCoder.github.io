@@ -5,7 +5,7 @@ modified = "2025-02-23"
 Toc = false
 +++
 
-Hello, and welcome to my website! I suppose you want to learn more about me... interesting choice.
+Welcome to the page about myself! I suppose you want to learn more about me... interesting choice.
 
 I like to read story books, my preferred genres are science fiction (surprise surprise) and fantasy. Some of my favourite books are
 - [The Witcher](https://www.goodreads.com/series/40911-the-witcher)
