@@ -17,11 +17,13 @@ I like to read story books, my preferred genres are science fiction (surprise su
 
 Twisty puzzles are awesome, particularly when it involves a lot of thinking. I can solve the 2x2, 3x3, 4x4, 5x5, 7x7 (mostly), Square-1, and Mirror Cube. At one point, I was averaging around 30 seconds to solve a 3x3.
 
-I play video games on occasion. I've spent significant time on
+I play video games on occasion. Here are the games I like the most, ordered by the amount of hours I've (approximately) played them.
 - [Minecraft](https://minecraft.net)
 - [The Legend of Zelda: Breath of the Wild](https://zelda.nintendo.com/breath-of-the-wild)
 - [The Legend of Zelda: Tears of the Kingdom](https://zelda.nintendo.com/tears-of-the-kingdom)
 - [osu!](https://osu.ppy.sh)
+- [The Legend of Zelda: Echoes of Wisdom](https://www.nintendo.com/sg/switch/bdge)
+- [Pokémon Yellow Version](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Yellow_Version)
 
 Oh and did I mention I like mathematics. I love having tools to model real world problems, and solve them precisely. But I don't plan on pursuing maths academically, high school maths was enough fun for me.
 
